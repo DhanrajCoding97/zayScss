@@ -741,6 +741,34 @@ header .header-main .wrapper {
   text-indent: 0;
 }
 
+.footer-main {
+  padding: 48px 0 39px;
+  background-color: #212934;
+  color: #cfd6e1;
+}
+.footer-main-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.footer-main-top a {
+  color: #cfd6e1;
+}
+.footer-heading {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #2d343f;
+  font-size: 31px;
+}
+
+.footer-logo a {
+  color: #59ab6d;
+}
+
 @media screen and (min-width: 768px) {
   .hamburger {
     display: none;

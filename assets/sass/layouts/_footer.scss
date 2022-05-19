@@ -1,0 +1,33 @@
+footer {
+
+  @at-root
+  .footer-main {
+    padding: 48px 0 39px;
+    background-color: $background-color;
+    color: $icon-color;
+
+    @at-root
+    .footer-main-top {
+      @include flexbox();
+      @include justify-content(space-between);
+
+      a {
+        color: $icon-color;
+      }
+
+      @at-root
+      .footer-heading { 
+        padding-bottom: 16px;
+        border-bottom: 1px solid #2d343f;
+        font-size: 31px;
+      }
+      
+      @at-root
+      .footer-logo { 
+        a {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
