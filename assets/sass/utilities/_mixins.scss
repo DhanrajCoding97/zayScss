@@ -88,12 +88,12 @@
 
 //icons
 @mixin font-icons($color, $size,) {
+  @content;
   color: $color;
   font-family: "fontAwesome";
   font-size: $size;
   float: left;
   text-indent: 0;
-  @content;
 }
 
 @mixin icon-box() {

@@ -77,7 +77,28 @@ li {
   font-weight: 700;
 }
 
-.cate
+.price {
+  color: #bcbcbc;
+  font-size: 18px;
+}
+
+.product-title {
+  padding-top: 34px;
+  font-size: 31px;
+}
+
+.product-desc {
+  padding: 4px 0 24px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.reviews { 
+  color: #bcbcbc;
+  font-size: 18px;
+  
+  &:hover { @include hover-effects($primary-color);   }
+}
 
 //body overflow hidden hamburger menu open
 .hidden {
@@ -93,6 +114,6 @@ li {
 // for wrapper
 .wrapper {
 	max-width: 1360px;
-	width: 78%;
+	width: 86%;
 	margin: 0 auto;
 }

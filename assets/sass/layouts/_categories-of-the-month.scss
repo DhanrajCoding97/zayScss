@@ -26,7 +26,7 @@
       }
 
       li {
-        @include flex-basis(28%);
+        @include flex-basis(25.3%);
         @include breakpoints(tablet) { margin-bottom: 15px; }
         @at-root
         .category-figure {

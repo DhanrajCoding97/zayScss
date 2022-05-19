@@ -1,0 +1,52 @@
+.feature-produt {
+  @at-root
+  .product-cards { 
+    padding: 31px 0 65px;
+    @include flexbox(); 
+    @include justify-content(space-between);
+
+    @include breakpoints(ipad-mini) {
+      padding: 31px 0;
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+  }
+  
+  @at-root
+  .product-card { 
+    @include flex-basis(30%);
+    border: 1px solid $border-color;
+    border-radius: 5px;
+
+    @include breakpoints(ipad-mini) { 
+      max-width: 360px; 
+      margin-bottom: 20px;
+    }
+
+
+    @at-root
+    .product-details {  
+      padding: 18px 16px 35px; 
+      
+      @at-root
+      .price-container { 
+        @include flexbox();
+        @include justify-content(space-between);
+      }
+
+      @at-root
+      .star { 
+        display: inline-block;
+        text-indent: $indent;
+
+        &::after {
+          @include font-icons($star-color, 19px) {
+            content: "\f005"
+          };
+        }
+      }
+    }
+
+  }
+}
