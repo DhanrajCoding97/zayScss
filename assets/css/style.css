@@ -125,6 +125,7 @@ li {
 }
 
 .banner-large-txt {
+  padding: 9px 0 13px;
   color: #212529;
   font-size: 30px;
 }
@@ -437,6 +438,105 @@ header .header-main .wrapper {
     -o-transition: 0.4s ease-in;
     transition: 0.4s ease-in;
   }
+}
+
+.banner {
+  position: relative;
+  background-color: #efefef;
+}
+.banner-slider-item {
+  padding: 47px 50px 62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.banner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-direction: normal;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.banner-slider-item > * {
+  flex: 1;
+}
+
+.slick-slider {
+  position: unset;
+}
+
+.slick-initialized .slick-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slick-dots {
+  left: 0;
+  bottom: 50px;
+}
+
+.slick-dots li button:before {
+  content: "\f108";
+  color: #59ab6d;
+  font-family: "Material Icons";
+  font-size: 50px;
+  opacity: 0.25;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #59ab6d;
+}
+
+.slick-dots li {
+  margin: 0 10px;
+}
+
+.slick-prev, .slick-next {
+  top: 50%;
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 30px;
+}
+
+.slick-prev:before {
+  content: "\f104";
+}
+
+.slick-next:before {
+  content: "\f105";
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #59ab6d;
+  font-family: "fontAwesome";
+  font-size: 60px;
+  opacity: 0.5;
+}
+
+.slick-prev:before::hover,
+.slick-next:before::hover {
+  -webkit-transition: 0.4s ease-in;
+  -o-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {

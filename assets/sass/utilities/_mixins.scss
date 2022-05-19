@@ -124,6 +124,7 @@
   -webkit-transition: .4s ease-in; 
   -o-transition: .4s ease-in;  
   transition: .4s ease-in;
+  @content;
 }
 
 //styles for larger devices

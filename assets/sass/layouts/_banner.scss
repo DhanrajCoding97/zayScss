@@ -1,0 +1,85 @@
+.banner {
+  position: relative;
+  background-color: $banner-bg;
+
+  .wrapper {
+
+    @at-root
+    .banner-slider {
+      @at-root
+      .banner-slider-item { 
+        padding: 47px 50px 62px;
+        @include flexbox();
+
+        @at-root
+        .banner-content {
+          @include flexbox();
+          @include flex-direction(column);
+          @include justify-content(center);
+        }
+      }
+
+      @at-root
+      .banner-slider-item > * { flex: 1; }
+    }
+  }
+
+  @at-root
+  .slick-slider { position: unset; }
+
+  @at-root
+  .slick-initialized .slick-slide { @include flexbox(); }
+  
+  @at-root
+  .slick-dots { 
+    left: 0;
+    bottom: 50px;
+  }
+
+  @at-root
+  .slick-dots li button:before {
+    content: '\f108';
+    color: $primary-color;
+    font-family: 'Material Icons';
+    font-size: 50px;
+    opacity: .25;
+  }
+
+  @at-root
+  .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: $primary-color;
+  }
+
+  @at-root
+  .slick-dots li { margin: 0 10px; }
+
+  @at-root
+  .slick-prev, .slick-next { top: 50%; }
+
+  @at-root
+  .slick-prev { left: 20px; }
+
+  @at-root
+  .slick-next { right: 30px; }
+
+  @at-root
+  .slick-prev:before { content: '\f104'; }
+
+  @at-root
+  .slick-next:before { content: '\f105'; }
+
+  @at-root
+  .slick-prev:before, .slick-next:before {
+    color: $primary-color;
+    font-family: 'fontAwesome';
+    font-size: 60px;
+    opacity: .5;
+  }
+  
+  @at-root
+  .slick-prev:before::hover,
+  .slick-next:before::hover {
+    @include transition-effect() { opacity: 1; }
+  }
+}
