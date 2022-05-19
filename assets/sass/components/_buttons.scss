@@ -17,3 +17,17 @@
   text-indent: $indent;
   transition: all 0.3s ease-in-out;
 }
+
+//go shop btn
+.go-btn {
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: $white;
+  font-weight: 700;
+
+  &:hover { @include hover-effects($primary-color) {
+    background-color: $background-color;
+  } }
+}

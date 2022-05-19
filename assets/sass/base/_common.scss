@@ -49,10 +49,35 @@ li {
 }
 
 .section-heading {
+  padding-bottom: 12px;
   font-size: 48px; 
   font-weight: 200;
   color: $txt-color;
+
+  @include breakpoints(tablet) { 
+    font-size: 30px; 
+    font-weight: 700;
+  }
+  @include breakpoints(mobile-small) { font-size: 22px; }
 }
+
+.section-subtxt { 
+  font-size: 19px;
+  line-height: 1.6; 
+
+  @include breakpoints(tablet) { 
+    font-size: 17px;
+    line-height: 1.3;
+  }
+}
+
+.category-title {
+  padding: 18px 0 10px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.cate
 
 //body overflow hidden hamburger menu open
 .hidden {

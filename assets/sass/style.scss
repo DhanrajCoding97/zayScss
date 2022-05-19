@@ -1,13 +1,14 @@
 @import 'utilities/variable';
+@import 'utilities/mixins';
 
 @import 'base/reset';
 @import 'base/common';
 
-@import 'utilities/mixins';
 
 // layouts
 @import 'layouts/header';
 @import 'layouts/banner';
+@import 'layouts/categories-of-the-month';
 
 //components
 @import 'components/buttons';

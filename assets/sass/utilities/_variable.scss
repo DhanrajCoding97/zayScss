@@ -11,5 +11,16 @@ $section-bg: #e9eef5;
 $banner-bg: #efefef;
 $header-txt-color: #cfd6e1; 
 $txt-color: #212529;
+$border-color: #dee2e6;
 
 $indent: -9999px;
+
+//breakpoints
+$devices: (
+  desktop: 1280px,
+  ipad-pro: 1024px,
+  ipad-mini: 995px,
+  tablet: 768px,
+  mobile: 540px,
+  mobile-small: 480px,
+);
