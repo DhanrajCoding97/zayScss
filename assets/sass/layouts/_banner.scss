@@ -28,12 +28,20 @@
   .slick-slider { position: unset; }
 
   @at-root
-  .slick-initialized .slick-slide { @include flexbox(); }
+  .slick-initialized .slick-slide { 
+    @include flexbox(); 
+
+    @include breakpoints(tablet) { 
+      @include flex-direction(column-reverse);
+    }
+  }
   
   @at-root
   .slick-dots { 
     left: 0;
     bottom: 50px;
+
+    @include breakpoints(ipad-pro) { bottom: 15px; }
   }
 
   @at-root
@@ -43,6 +51,8 @@
     font-family: 'Material Icons';
     font-size: 50px;
     opacity: .25;
+
+    @include breakpoints(mobile) { font-size: 40px; }
   }
 
   @at-root
@@ -52,7 +62,10 @@
   }
 
   @at-root
-  .slick-dots li { margin: 0 10px; }
+  .slick-dots li { 
+    margin: 0 10px; 
+    @include breakpoints(mobile) { margin: 0 6px; }
+  }
 
   @at-root
   .slick-prev, .slick-next { top: 50%; }
@@ -75,6 +88,9 @@
     font-family: 'fontAwesome';
     font-size: 60px;
     opacity: .5;
+
+    @include breakpoints(mobile) { font-size: 40px; }
+    @include breakpoints(mobile-small) { font-size: 30px; }
   }
   
   @at-root

@@ -127,16 +127,46 @@ li {
   font-size: 48px;
   color: #59ab6d;
 }
+@media only screen and (max-width: 540px) {
+  .banner-heading {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner-heading {
+    font-size: 23px;
+  }
+}
 
 .banner-large-txt {
   padding: 9px 0 13px;
   color: #212529;
   font-size: 30px;
 }
+@media only screen and (max-width: 540px) {
+  .banner-large-txt {
+    font-size: 23px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner-large-txt {
+    font-size: 16px;
+  }
+}
 
 .banner-small-txt {
   color: #212529;
   font-size: 18px;
+}
+@media only screen and (max-width: 540px) {
+  .banner-small-txt {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner-small-txt {
+    font-size: 13px;
+  }
 }
 
 .banner-link {
@@ -403,7 +433,7 @@ header .header-main .wrapper {
   min-height: 100vh;
   position: absolute;
   z-index: 1;
-  top: 12%;
+  top: 50px;
   left: 0;
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -432,19 +462,8 @@ header .header-main .wrapper {
 }
 @media only screen and (max-width: 768px) {
   .icons {
-    display: block;
-    position: absolute;
-    top: 66%;
-    z-index: 1;
-    left: 102%;
-    transform: translate(-50%, -50%);
-    -webkit-transition: 0.4s ease-in;
-    -o-transition: 0.4s ease-in;
-    transition: 0.4s ease-in;
+    display: none;
   }
-}
-.icons.active {
-  left: 50%;
 }
 .search::before {
   content: "\f002";
@@ -556,10 +575,26 @@ header .header-main .wrapper {
   display: -ms-flexbox;
   display: flex;
 }
+@media only screen and (max-width: 768px) {
+  .slick-initialized .slick-slide {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
 
 .slick-dots {
   left: 0;
   bottom: 50px;
+}
+@media only screen and (max-width: 1024px) {
+  .slick-dots {
+    bottom: 15px;
+  }
 }
 
 .slick-dots li button:before {
@@ -569,6 +604,11 @@ header .header-main .wrapper {
   font-size: 50px;
   opacity: 0.25;
 }
+@media only screen and (max-width: 540px) {
+  .slick-dots li button:before {
+    font-size: 40px;
+  }
+}
 
 .slick-dots li.slick-active button:before {
   opacity: 1;
@@ -577,6 +617,11 @@ header .header-main .wrapper {
 
 .slick-dots li {
   margin: 0 10px;
+}
+@media only screen and (max-width: 540px) {
+  .slick-dots li {
+    margin: 0 6px;
+  }
 }
 
 .slick-prev, .slick-next {
@@ -604,6 +649,16 @@ header .header-main .wrapper {
   font-family: "fontAwesome";
   font-size: 60px;
   opacity: 0.5;
+}
+@media only screen and (max-width: 540px) {
+  .slick-prev:before, .slick-next:before {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .slick-prev:before, .slick-next:before {
+    font-size: 30px;
+  }
 }
 
 .slick-prev:before::hover,
@@ -913,11 +968,14 @@ footer .footer-main-bottom {
   text-align: center;
   text-indent: -9999px;
 }
-.footer-social-links a:hover {
-  -webkit-transition: 0.4s ease-in;
-  -o-transition: 0.4s ease-in;
-  transition: 0.4s ease-in;
-  background-color: #cfd6e1;
+@media screen and (min-width: 768px) {
+  .footer-social-links a:hover {
+    background-color: #cfd6e1;
+    color: #212934;
+    -webkit-transition: 0.4s ease-in;
+    -o-transition: 0.4s ease-in;
+    transition: 0.4s ease-in;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer-social-links a:hover::before {
@@ -990,6 +1048,7 @@ footer .footer-main-bottom {
 @media only screen and (max-width: 768px) {
   .copyright-txt {
     font-size: 16px;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 540px) {

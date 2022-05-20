@@ -94,7 +94,9 @@ footer {
         @include icon-box();
         text-indent: $indent;
 
-        &:hover { @include transition-effect() { background-color: $icon-color; } }
+        &:hover { @include hover-effects($background-color) {
+          background-color: $icon-color;
+        } }
 
         &:hover::before { @include hover-effects($footer-bg) }
  
@@ -145,7 +147,11 @@ footer {
       color: $icon-color;
       font-size: 18px;
 
-      @include breakpoints(tablet) { font-size: 16px; }
+      @include breakpoints(tablet) { 
+        font-size: 16px; 
+        text-align: center;
+      }
+
       @include breakpoints(mobile) { font-size: 14px; }
       @include breakpoints(mobile-small) { font-size: 10px; }
 
