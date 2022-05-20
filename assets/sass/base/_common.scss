@@ -35,7 +35,8 @@ li {
 .banner-heading {
   color: $primary-color;
   font-size: 48px;
-
+  
+  @include breakpoints(ipad-mini) { font-size: 39px;}
   @include breakpoints(mobile) { font-size: 40px; }
   @include breakpoints(mobile-small) { font-size: 23px; }
 }
@@ -44,7 +45,9 @@ li {
   padding: 9px 0 13px;
   color: $txt-color;
   font-size: 30px; 
+  line-height: 1.1;
 
+  @include breakpoints(ipad-mini) { font-size: 28px; }
   @include breakpoints(mobile) { font-size: 23px; }
   @include breakpoints(mobile-small) { font-size: 16px; }
 }
@@ -52,6 +55,7 @@ li {
 .banner-small-txt { 
   color: $txt-color;
   font-size: 18px; 
+  line-height: 1.4;
 
   @include breakpoints(mobile) { font-size: 16px;}
   @include breakpoints(mobile-small) { font-size: 13px;}
