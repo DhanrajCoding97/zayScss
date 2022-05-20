@@ -414,11 +414,18 @@ header .header-main .wrapper {
 }
 @media only screen and (max-width: 768px) {
   .navbar {
-    display: none;
+    width: 100%;
+    position: absolute;
+    top: 17%;
+    z-index: 1;
+    left: 100%;
+    -webkit-transition: 0.4s ease-in;
+    -o-transition: 0.4s ease-in;
+    transition: 0.4s ease-in;
   }
 }
 .navbar.active {
-  display: block;
+  left: 0;
 }
 .navbar .nav-links {
   width: 65%;
@@ -452,32 +459,25 @@ header .header-main .wrapper {
 }
 @media only screen and (max-width: 768px) {
   .navbar .nav-links {
-    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: start;
+    justify-content: start;
+    background-color: #59ab6d;
+    -webkit-transition: 0.4s ease-in;
+    -o-transition: 0.4s ease-in;
+    transition: 0.4s ease-in;
   }
-}
-.navbar .nav-links.active {
-  width: 100%;
-  min-height: 100vh;
-  position: absolute;
-  z-index: 1;
-  top: 50px;
-  left: 0;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -moz-box-direction: normal;
-  -moz-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  background-color: #59ab6d;
-  -webkit-transition: 0.4s ease-in;
-  -o-transition: 0.4s ease-in;
-  transition: 0.4s ease-in;
 }
 
 .icons {
