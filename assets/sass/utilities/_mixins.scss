@@ -104,28 +104,20 @@
   text-align: center;
 }
 
-//mixin for transition effects with color parameter
-@mixin transition($color) {
-  color: $color;
-  -webkit-transition: .4s ease-in; 
-  -o-transition: .4s ease-in;  
-  transition: .4s ease-in;
-}
-
 // mixin to give hover effect only on desktops
-@mixin  hover-effects($color) {
+@mixin  hover-effects() {
   @media screen and (min-width: 768px) {
     @content;
-    @include transition($color);
+    @include transition-effect();
   }
 }
 
 //mixin for transition effects
 @mixin transition-effect() {
+  @content;
   -webkit-transition: .4s ease-in; 
   -o-transition: .4s ease-in;  
   transition: .4s ease-in;
-  @content;
 }
 
 //styles for larger devices
@@ -168,10 +160,14 @@
 
 //mixin for media queries
 @mixin breakpoints($device) {
-  @if($device == 'desktop') {
-    @media only screen and (max-width: 1280px) {
+  @if($device == 'desktop-large') {
+    @media only screen and (max-width: 1366px) {
       @content;
     }
+  } @else if($device == 'desktop-small') {
+    @media only screen and (max-width: 1280px) {
+      @content;
+    } 
   } @else if($device == 'ipad-pro') {
     @media only screen and (max-width: 1024px) {
       @content;
@@ -193,13 +189,6 @@
       @content;
     } 
   }
-}
-
-//custom breakpoint
-@mixin custom-breakpoint($width) {
-  @media only screen and (max-width: $width) {
-    @content;
-  } 
 }
 
 //mixin for placeholder
