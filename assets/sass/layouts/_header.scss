@@ -102,7 +102,7 @@ header {
           min-height: 100vh;
           position: absolute;
           z-index: 1;
-          top: 12%;
+          top: 50px;
           left: 0;
           @include flex-direction(column);
           @include justify-content(start);
@@ -117,17 +117,7 @@ header {
       @include flexbox();
       @include flex-basis(12%);
 
-      @include breakpoints(tablet) { 
-        display: block; 
-        position: absolute;
-        top: 66%;
-        z-index: 1;
-        left: 102%;
-        transform: translate(-50%, -50%);
-        @include transition-effect();
-      }
-
-      &.active { left: 50%; }
+      @include breakpoints(tablet) { display: none; }
 
       @at-root
       .search::before { content: '\f002';}

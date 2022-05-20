@@ -35,17 +35,28 @@ li {
 .banner-heading {
   font-size: 48px;
   color: $primary-color;
+
+  @include breakpoints(mobile) { font-size: 40px;}
+  @include breakpoints(mobile-small) { font-size: 23px;}
 }
 
 .banner-large-txt {
   padding: 9px 0 13px;
   color: $txt-color;
   font-size: 30px; 
+
+  @include breakpoints(mobile) { font-size: 23px;}
+  @include breakpoints(mobile-small) { font-size: 16px;}
+
+
 }
 
 .banner-small-txt { 
   color: $txt-color;
   font-size: 18px; 
+
+  @include breakpoints(mobile) { font-size: 16px;}
+  @include breakpoints(mobile-small) { font-size: 13px;}
 }
 
 .banner-link { 
