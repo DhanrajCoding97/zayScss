@@ -97,10 +97,11 @@
 }
 
 @mixin icon-box() {
-  height: 35px;
-  width: 35px;
-  border-radius: 5px;
-  vertical-align: middle;
+  height: 50px;
+  width: 50px;
+  border: 1px solid $border-footer-color;
+  border-radius: 50px;
+  text-align: center;
 }
 
 //mixin for transition effects with color parameter
@@ -166,6 +167,7 @@
   transform: $translate rotate(#{$rotate}deg);
 }
 
+
 //mixin for media queries
 @mixin breakpoints($device) {
   @if($device == 'desktop') {
@@ -193,4 +195,21 @@
       @content;
     } 
   }
+}
+
+//mixin for placeholder
+@mixin placeholder {
+  ::-webkit-input-placeholder { @content; }
+  :-moz-placeholder { @content; }
+  ::-moz-placeholder { @content; }        
+  :-ms-input-placeholder { @content; }   
+}
+
+//mixin for placeholder focus
+@mixin placeholder-focus($color) {
+  input:focus::-webkit-input-placeholder { color: $color; }
+  input:focus::-moz-placeholder { color: $color; }
+  input:focus::-ms-input-placeholder { color: $color; }
+  input:focus::-ms-input-placeholder { color: $color; }
+  input:focus::placeholder { color: $color; }
 }

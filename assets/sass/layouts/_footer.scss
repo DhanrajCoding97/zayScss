@@ -2,31 +2,158 @@ footer {
 
   @at-root
   .footer-main {
-    padding: 48px 0 39px;
+    padding: 48px 0 18px;
     background-color: $background-color;
     color: $icon-color;
 
+    @include breakpoints(ipad-mini) { padding: 30px 0; }
+    
     @at-root
     .footer-main-top {
+      padding-bottom: 37px;
       @include flexbox();
-      @include justify-content(space-between);
+      border-bottom: 1px solid $border-footer-color;
+
+      @include breakpoints(ipad-mini) { 
+        text-align: center;
+        @include flex-direction(column); 
+        @include align-items(center);
+      }
+      
+      & > * { 
+        margin-right: 2%; 
+        flex: 1;
+
+        @include breakpoints(ipad-mini) { 
+          margin-bottom: 20px;
+        }
+      }
+
+      & > div:last-child { 
+        margin-right: 0;
+
+        @include breakpoints(ipad-mini) { margin-bottom: 0; }
+      }
+
+      li { padding-bottom: 18px;}
 
       a {
         color: $icon-color;
+
+        &:hover { @include hover-effects($primary-color); }
       }
 
       @at-root
       .footer-heading { 
         padding-bottom: 16px;
-        border-bottom: 1px solid #2d343f;
+        border-bottom: 1px solid $border-footer-color;
         font-size: 31px;
       }
       
-      @at-root
-      .footer-logo { 
-        a {
-          color: $primary-color;
+      .footer-logo { color: $primary-color; }
+    }
+
+    @at-root
+    .info-container,
+    .products,
+    .info-links {
+      padding-top: 24px;
+      @include flexbox();
+      @include flex-direction(column);
+    }
+
+    @at-root
+    .location-icon::before { @include font-content("\f3c5"); }
+
+    @at-root 
+    .info-container {
+      a {
+        &:before { @include font-icons($icon-color, 20px){ padding-right: 8px; } }
+
+        &:hover::before { @include hover-effects($primary-color); }
+      }
+    }
+  }
+
+  .footer-main-bottom {
+    padding-top: 30px;
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    @include breakpoints(tablet) { 
+      @include flex-direction(column); 
+    }
+
+    @at-root 
+    .footer-social-links {
+      @include breakpoints(tablet) { padding-bottom: 25px; }
+      li {margin-right: 8px}
+
+      a {
+        @include icon-box();
+        text-indent: $indent;
+
+        &:hover { @include transition-effect() { background-color: $icon-color; } }
+
+        &:hover::before { @include hover-effects($footer-bg) }
+ 
+        &::before {
+          height: 100%;
+          width: 100%;
+          padding-top: 12px;
+          @include font-icons($icon-color, 24px);
         }
+      }
+    }
+
+    @at-root 
+    .subscribe-form {
+      position: relative;
+      display: flex;
+
+      @at-root
+      .email-container { 
+        width: 330px; 
+
+        @include breakpoints(mobile-small) { width: 250px; }
+      }
+
+      @at-root
+      .email-field {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid $border-footer-color;
+        border-radius: 4px;
+        background-color: $background-color;
+        color: $icon-color  ;
+
+        &:focus { outline: none; }
+      }
+
+      @include placeholder-focus($primary-color);
+    }
+  }
+
+  @at-root
+  .footer-end {
+    padding: 16px 0;
+    background-color: $footer-end-bg;
+
+    @at-root
+    .copyright-txt{
+      color: $icon-color;
+      font-size: 18px;
+
+      @include breakpoints(tablet) { font-size: 16px; }
+      @include breakpoints(mobile) { font-size: 14px; }
+      @include breakpoints(mobile-small) { font-size: 10px; }
+
+      a {
+        color: $icon-color;
+        text-decoration: underline;
+
+        &:hover { @include hover-effects($primary-color); }
       }
     }
   }

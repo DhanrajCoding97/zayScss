@@ -48,6 +48,13 @@ li {
   font-size: 18px; 
 }
 
+.banner-link { 
+  color: $primary-color;
+  text-decoration: underline;
+
+  &:hover { @include hover-effects($background-color); }
+}
+
 .section-heading {
   padding-bottom: 12px;
   font-size: 48px; 
