@@ -127,6 +127,11 @@ li {
   color: #59ab6d;
   font-size: 48px;
 }
+@media only screen and (max-width: 995px) {
+  .banner-heading {
+    font-size: 39px;
+  }
+}
 @media only screen and (max-width: 540px) {
   .banner-heading {
     font-size: 40px;
@@ -142,6 +147,12 @@ li {
   padding: 9px 0 13px;
   color: #212529;
   font-size: 30px;
+  line-height: 1.1;
+}
+@media only screen and (max-width: 995px) {
+  .banner-large-txt {
+    font-size: 28px;
+  }
 }
 @media only screen and (max-width: 540px) {
   .banner-large-txt {
@@ -157,6 +168,7 @@ li {
 .banner-small-txt {
   color: #212529;
   font-size: 18px;
+  line-height: 1.4;
 }
 @media only screen and (max-width: 540px) {
   .banner-small-txt {
