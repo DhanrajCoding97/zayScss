@@ -839,6 +839,9 @@ header .header-main .wrapper {
   float: left;
   text-indent: 0;
 }
+.star.active::after {
+  color: #bcbcbc;
+}
 
 .footer-main {
   padding: 48px 0 18px;
