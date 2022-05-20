@@ -45,6 +45,8 @@
             content: "\f005"
           };
         }
+
+        &.active::after { color: $grey-star-color; }
       }
     }
 
