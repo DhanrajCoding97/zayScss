@@ -30,10 +30,7 @@
   @at-root
   .slick-initialized .slick-slide { 
     @include flexbox(); 
-
-    @include breakpoints(tablet) { 
-      @include flex-direction(column-reverse);
-    }
+    @include breakpoints(tablet) { @include flex-direction(column-reverse); }
   }
   
   @at-root
@@ -94,8 +91,8 @@
   }
   
   @at-root
-  .slick-prev:before::hover,
-  .slick-next:before::hover {
+  .slick-prev::before:hover,
+  .slick-next::before:hover {
     @include transition-effect() { opacity: 1; }
   }
 }

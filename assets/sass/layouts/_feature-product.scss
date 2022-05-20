@@ -23,8 +23,7 @@
       max-width: 360px; 
       margin-bottom: 20px;
     }
-
-
+    
     @at-root
     .product-details {  
       padding: 18px 16px 35px; 
@@ -49,6 +48,5 @@
         &.active::after { color: $grey-star-color; }
       }
     }
-
   }
 }
