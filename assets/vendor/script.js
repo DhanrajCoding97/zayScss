@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var hamburgerMenu = $('.hamburger');
   var navBar = $('nav');
-  var navLinks = $('.nav-links')
+  var navLinks = $('.nav-links');
 
   //hamburger
   hamburgerMenu.click(function() {
