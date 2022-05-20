@@ -65,7 +65,7 @@ li {
   color: $primary-color;
   text-decoration: underline;
 
-  &:hover { @include hover-effects($background-color); }
+  &:hover { @include hover-effects() { color: $primary-color }; }
 }
 
 .section-heading {
@@ -106,8 +106,8 @@ li {
   padding-top: 34px;
   font-size: 31px;
 
-  @include custom-breakpoint(1317px) { font-size: 30px; }
-  @include breakpoints(desktop) { font-size: 22px; }
+  @include breakpoints(desktop-large) { font-size: 30px; }
+  @include breakpoints(desktop-small) { font-size: 22px; }
 
 }
 
@@ -115,14 +115,14 @@ li {
   padding: 4px 0 24px;
   font-size: 18px;
   line-height: 1.5;
-  @include breakpoints(desktop) { font-size: 16px; }
+  @include breakpoints(desktop-small) { font-size: 16px; }
 }
 
 .reviews { 
   color: #bcbcbc;
   font-size: 18px;
   
-  &:hover { @include hover-effects($primary-color);   }
+  &:hover { @include hover-effects() { color: $primary-color }; }
 }
 
 //body overflow hidden hamburger menu open

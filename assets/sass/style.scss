@@ -4,6 +4,8 @@
 @import 'base/reset';
 @import 'base/common';
 
+//components
+@import 'components/buttons';
 
 // layouts
 @import 'layouts/header';
@@ -11,6 +13,3 @@
 @import 'layouts/categories-of-the-month';
 @import 'layouts/feature-product';
 @import 'layouts/footer';
-
-//components
-@import 'components/buttons';

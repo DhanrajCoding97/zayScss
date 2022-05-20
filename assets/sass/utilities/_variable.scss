@@ -22,7 +22,8 @@ $indent: -9999px;
 
 //breakpoints
 $devices: (
-  desktop: 1280px,
+  desktop-large: 1366px,
+  desktop-small: 1280px,
   ipad-pro: 1024px,
   ipad-mini: 995px,
   tablet: 768px,

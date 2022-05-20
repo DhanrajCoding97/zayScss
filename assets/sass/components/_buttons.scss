@@ -16,7 +16,7 @@
   display: block;
   background-color: $primary-color;
   text-indent: $indent;
-  transition: all 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 //go shop btn
@@ -28,7 +28,12 @@
   color: $white;
   font-weight: 700;
 
-  &:hover { @include hover-effects($primary-color) { background-color: $background-color; } }
+  &:hover { @include hover-effects() 
+    { 
+      color: $primary-color;
+      background-color: $background-color; 
+    }
+  }
 }
 
 //subscribe btn
@@ -43,5 +48,10 @@
   color: $icon-color;
   font-size: 17px;
 
-  &:hover { @include hover-effects($primary-color) { background-color: $icon-color; } }
+  &:hover { @include hover-effects() 
+    { 
+      background-color: $icon-color; 
+      color: $primary-color;
+    } 
+  }
 }
