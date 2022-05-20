@@ -1,13 +1,11 @@
 $(document).ready(function() {
   var hamburgerMenu = $('.hamburger');
-  var navBar = $('nav');
-  var navLinks = $('.nav-links');
+  var navBar = $('.navbar');
 
   //hamburger
   hamburgerMenu.click(function() {
     hamburgerMenu.toggleClass('active');
     navBar.toggleClass('active');
-    navLinks.toggleClass('active');
     $('body').toggleClass('hidden');
   });
 
