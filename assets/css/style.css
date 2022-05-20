@@ -289,6 +289,11 @@ li {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 768px) {
+  header {
+    position: relative;
+  }
+}
 header .header-top {
   padding: 15px 0;
   background-color: #212934;
@@ -416,7 +421,7 @@ header .header-main .wrapper {
   .navbar {
     width: 100%;
     position: absolute;
-    top: 17%;
+    top: 100%;
     z-index: 1;
     left: 100%;
     -webkit-transition: 0.4s ease-in;
@@ -688,8 +693,8 @@ header .header-main .wrapper {
   }
 }
 
-.slick-prev:before::hover,
-.slick-next:before::hover {
+.slick-prev::before:hover,
+.slick-next::before:hover {
   -webkit-transition: 0.4s ease-in;
   -o-transition: 0.4s ease-in;
   transition: 0.4s ease-in;

@@ -81,9 +81,7 @@ footer {
     @include justify-content(space-between);
     @include align-items(center);
 
-    @include breakpoints(tablet) { 
-      @include flex-direction(column); 
-    }
+    @include breakpoints(tablet) { @include flex-direction(column); }
 
     @at-root 
     .footer-social-links {
@@ -94,10 +92,7 @@ footer {
         @include icon-box();
         text-indent: $indent;
 
-        &:hover { @include hover-effects($background-color) {
-          background-color: $icon-color;
-        } }
-
+        &:hover { @include hover-effects($background-color) { background-color: $icon-color; } }
         &:hover::before { @include hover-effects($footer-bg) }
  
         &::before {
