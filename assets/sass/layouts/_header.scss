@@ -74,8 +74,18 @@ header {
     @at-root
     .navbar { 
       @include flex-basis(80%);
-      @include breakpoints(tablet) { display: none; }
-      &.active { display: block;}
+      @include breakpoints(tablet) { 
+        // display: none; 
+        width: 100%;
+        position: absolute;
+        top: 17%;
+        z-index: 1;
+        left: 100%;
+        @include transition-effect();
+      }
+
+      &.active { left: 0; }
+
       .nav-links {
         width: 65%;
         margin: 0 auto;
@@ -95,20 +105,14 @@ header {
 
           &:hover { @include hover-effects($primary-color); }
         }
-        & { @include breakpoints(tablet) { left: 100%; }}
-
-        &.active {
-          width: 100%;
-          min-height: 100vh;
-          position: absolute;
-          z-index: 1;
-          top: 50px;
-          left: 0;
-          @include flex-direction(column);
-          @include justify-content(start);
-          background-color: $primary-color;
-          @include transition-effect();
-        }
+        & { @include breakpoints(tablet) { 
+            width: 100%;
+            min-height: 100vh;
+            @include flex-direction(column);
+            @include justify-content(start);
+            background-color: $primary-color;
+            @include transition-effect();
+        }}
       }
     }
 
