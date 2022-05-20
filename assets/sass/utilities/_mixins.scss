@@ -197,6 +197,13 @@
   }
 }
 
+//custom breakpoint
+@mixin custom-breakpoint($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  } 
+}
+
 //mixin for placeholder
 @mixin placeholder {
   ::-webkit-input-placeholder { @content; }

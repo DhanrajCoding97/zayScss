@@ -33,11 +33,11 @@ li {
 
 //common styling
 .banner-heading {
-  font-size: 48px;
   color: $primary-color;
+  font-size: 48px;
 
-  @include breakpoints(mobile) { font-size: 40px;}
-  @include breakpoints(mobile-small) { font-size: 23px;}
+  @include breakpoints(mobile) { font-size: 40px; }
+  @include breakpoints(mobile-small) { font-size: 23px; }
 }
 
 .banner-large-txt {
@@ -45,10 +45,8 @@ li {
   color: $txt-color;
   font-size: 30px; 
 
-  @include breakpoints(mobile) { font-size: 23px;}
-  @include breakpoints(mobile-small) { font-size: 16px;}
-
-
+  @include breakpoints(mobile) { font-size: 23px; }
+  @include breakpoints(mobile-small) { font-size: 16px; }
 }
 
 .banner-small-txt { 
@@ -68,9 +66,9 @@ li {
 
 .section-heading {
   padding-bottom: 12px;
+  color: $txt-color;
   font-size: 48px; 
   font-weight: 200;
-  color: $txt-color;
 
   @include breakpoints(tablet) { 
     font-size: 30px; 
@@ -103,12 +101,17 @@ li {
 .product-title {
   padding-top: 34px;
   font-size: 31px;
+
+  @include custom-breakpoint(1317px) { font-size: 30px; }
+  @include breakpoints(desktop) { font-size: 22px; }
+
 }
 
 .product-desc {
   padding: 4px 0 24px;
   font-size: 18px;
   line-height: 1.5;
+  @include breakpoints(desktop) { font-size: 16px; }
 }
 
 .reviews { 

@@ -1,6 +1,7 @@
 //hamburger
 .hamburger { 
   @include desktops() { display: none; }
+  cursor: pointer;
   
   &.active { display: block; }
   &.active .bar:nth-child(2) { opacity: 0;}
@@ -27,9 +28,7 @@
   color: $white;
   font-weight: 700;
 
-  &:hover { @include hover-effects($primary-color) {
-    background-color: $background-color;
-  } }
+  &:hover { @include hover-effects($primary-color) { background-color: $background-color; } }
 }
 
 //subscribe btn
