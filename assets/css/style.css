@@ -442,7 +442,7 @@ header .header-top .wrapper {
 }
 
 .linkedin::before {
-  content: "\f08c  ";
+  content: "\f08cw";
 }
 
 .social-links li a {

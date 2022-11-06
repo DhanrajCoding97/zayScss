@@ -1,83 +1,103 @@
 header {
-  @include breakpoints(tablet) { position: relative; }
+  @include breakpoints(tablet) {
+    position: relative;
+  }
   .header-top {
     padding: 15px 0;
     background-color: $background-color;
-    @include breakpoints(tablet) { display: none; }
-    
-    .wrapper { 
-      @include flexbox();
-      @include justify-content(space-between);  
+    @include breakpoints(tablet) {
+      display: none;
+    }
 
-      @at-root
-      .contact-info {
-        @at-root
-        .phone-icon::before { @include font-content("\f879"); }
-  
-        @at-root
-        .email-icon::before { @include font-content("\f0e0"); }
-        
+    .wrapper {
+      @include flexbox();
+      @include justify-content(space-between);
+
+      @at-root .contact-info {
+        @at-root .phone-icon::before {
+          @include font-content("\f879");
+        }
+
+        @at-root .email-icon::before {
+          @include font-content("\f0e0");
+        }
+
         a {
           padding: 0 6px;
           color: $header-txt-color;
           font-size: 12px;
-  
-          &:before { 
-            @include font-icons($icon-color, 11px){
+
+          &:before {
+            @include font-icons($icon-color, 11px) {
               padding-right: 6px;
-            }      
+            }
           }
-  
-          &:hover { @include hover-effects() { color: $primary-color; } }
-  
-          &:hover::before { @include hover-effects() { color: $primary-color; } }
+
+          &:hover {
+            @include hover-effects() {
+              color: $primary-color;
+            }
+          }
+
+          &:hover::before {
+            @include hover-effects() {
+              color: $primary-color;
+            }
+          }
         }
       }
-      
-      @at-root
-      .social-links {
-        @at-root
-        .facebook::before { @include font-content("\f39e")}
-        @at-root
-        .twitter::before { @include font-content("\f099")}
-        @at-root
-        .instagram::before { @include font-content("\f16d")}
-        @at-root
-        .linkedin::before { @include font-content("\f08c  ")}
-        
+
+      @at-root .social-links {
+        @at-root .facebook::before {
+          @include font-content("\f39e");
+        }
+        @at-root .twitter::before {
+          @include font-content("\f099");
+        }
+        @at-root .instagram::before {
+          @include font-content("\f16d");
+        }
+        @at-root .linkedin::before {
+          @include font-content("\f08c");
+        }
+
         li {
           a {
             padding: 0 6px;
             text-indent: $indent;
-    
-            &::before { @include font-icons($icon-color, 11px); }
-            
-            &:hover::before { @include hover-effects() { color: $primary-color; } }
-          } 
+
+            &::before {
+              @include font-icons($icon-color, 11px);
+            }
+
+            &:hover::before {
+              @include hover-effects() {
+                color: $primary-color;
+              }
+            }
+          }
         }
       }
     }
   }
-  
+
   .header-main {
     .wrapper {
       @include flexbox();
       @include justify-content(space-between);
       @include align-items(center);
 
-      @at-root
-      .logo { 
+      @at-root .logo {
         @include flex-basis(15%);
         @include desktops() {
-          @include flex-basis(8%); 
+          @include flex-basis(8%);
         }
       }
-  
-      @at-root
-      .navbar { 
+
+      @at-root .navbar {
         @include flex-basis(80%);
 
-        @include breakpoints(tablet) { 
+        @include breakpoints(tablet) {
           width: 100%;
           position: absolute;
           top: 100%;
@@ -85,81 +105,100 @@ header {
           left: 100%;
           @include transition-effect();
         }
-  
-        &.active { left: 0; }
-  
+
+        &.active {
+          left: 0;
+        }
+
         .nav-links {
           width: 65%;
           margin: 0 auto;
           @include flexbox();
           @include justify-content(space-between);
-  
+
           li {
             @include breakpoints(tablet) {
               padding: 25px 0;
               margin: 0 auto;
             }
           }
-  
+
           a {
             color: $black;
             font-size: 18px;
-  
-            &:hover { @include hover-effects() { color: $primary-color; } }
+
+            &:hover {
+              @include hover-effects() {
+                color: $primary-color;
+              }
+            }
           }
-  
-          & { @include breakpoints(tablet) { 
-            width: 100%;
-            min-height: 100vh;
-            @include flex-direction(column);
-            @include justify-content(start);
-            background-color: $primary-color;
-            @include transition-effect();
-          }}
+
+          & {
+            @include breakpoints(tablet) {
+              width: 100%;
+              min-height: 100vh;
+              @include flex-direction(column);
+              @include justify-content(start);
+              background-color: $primary-color;
+              @include transition-effect();
+            }
+          }
         }
       }
-  
-      @at-root
-      .icons {
+
+      @at-root .icons {
         @include flexbox();
         @include flex-basis(12%);
-        @include breakpoints(tablet) { display: none; }
-  
-        @at-root
-        .search::before { content: '\f002';}
-        .cart::before { content: '\f218';}
-        .user::before { content: '\f007';}
-  
-        .user::after { 
+        @include breakpoints(tablet) {
+          display: none;
+        }
+
+        @at-root .search::before {
+          content: "\f002";
+        }
+        .cart::before {
+          content: "\f218";
+        }
+        .user::before {
+          content: "\f007";
+        }
+
+        .user::after {
           @include superscript("+99") {
             padding: 2px 7px;
             @include translate(50%, 0);
           }
         }
-  
+
         .cart::after {
           @include superscript("7") {
             padding: 2px 8px;
             @include translate(20%, 0);
           }
         }
-  
+
         li {
           padding: 0 11px;
-  
-          span { 
+
+          span {
             display: inline-block;
             position: relative;
             text-indent: $indent;
             cursor: pointer;
-  
-            &::before {@include font-icons($black, 19px);}
 
-            &:hover::before { @include hover-effects() { color: $primary-color; } }
+            &::before {
+              @include font-icons($black, 19px);
+            }
+
+            &:hover::before {
+              @include hover-effects() {
+                color: $primary-color;
+              }
+            }
           }
         }
       }
     }
-
   }
 }
